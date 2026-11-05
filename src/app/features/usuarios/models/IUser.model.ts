@@ -9,5 +9,7 @@ export interface IUser {
     address:  IAddress;
     phone:    string;
     website:  string;
-    company:  ICompany;
+  company: ICompany;
+
+  is_favorite?: boolean;
 }

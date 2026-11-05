@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular';
+
+import { NetworkSystemService } from './shared/services/network-system-service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,6 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
+  private readonly _networkStatus = inject(NetworkSystemService);
   constructor() {}
 }
